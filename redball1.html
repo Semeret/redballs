@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="https://storage.googleapis.com/ics-redball/redball.js"></script>
+        <script type="text/javascript">
+            function sayhello(){
+                alert('Hi There');
+            }
+            function moveright(){
+                if (redball.left== +10) {
+                  console.log('Right Wall hit');
+                }
+                else{
+                redball.left= redball.left +10;
+                }
+            }
+            function moveleft(){
+                if (redball.left== 0) {
+                  console.log('Left Wall hit');  
+                }
+                else{
+                redball.left= redball.left -10;
+                }
+            }
+            function moveup(){
+                if (redball.top== 0) {
+                    console.log('Top wall hit');
+                }
+                else{
+                redball.top= redball.top -10;
+                }
+            }
+            function movedown(){
+                if (redball.top== 340) {
+                    console.log('Bottom wall hit');
+                }
+                else{
+                redball.top= redball.top +10;
+                }
+            }
+            //move down right//
+     function movedownright(){
+         movedown();
+         moveright()
+     }
+     //move up right//
+     function moveupright(){
+         moveup();
+         moveright()
+     }
+     //move up left//
+     function moveupleft(){
+         moveup();
+         moveleft()
+     }
+       //move down left//
+     function movedownleft(){
+         movedown();
+         moveleft()
+     }
+            function movetriangle(){
+                //sliding downright
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                //sliding left
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                //sliding up right
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                
+            }
+            function movesquare(){
+                //sliding right
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                //sliding down
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                //sliding left
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                //sliding up
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                
+            }
+            function moveoctagon(){
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                moveright();
+                //sliding down right
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                movedownright();
+                //sliding down
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                movedown();
+                //sliding down left
+                movedownleft();
+                movedownleft();
+                movedownleft();
+                movedownleft();
+                movedownleft();
+                movedownleft();
+                //sliding left
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                moveleft();
+                //sliding up left
+                moveupleft();
+                moveupleft();
+                moveupleft();
+                moveupleft();
+                moveupleft();
+                moveupleft();
+                //sliding up
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                moveup();
+                //sliding up right
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+                moveupright();
+            }
+        </script>
+    </head>
+</html>
+<body>
+    <img id="redball" src="http://lrn.icstars.org/redball.jpg"></img>
+    <button onclick="sayhello()">Hello Worlds</button>
+    <button onclick="moveright()">Move Right</button>
+    <button onclick="moveleft()">Move Left</button>
+    <button onclick="moveup()">Move Up</button>
+    <button onclick="movedown()">Move Down</button>
+    <button onclick="movesquare()">Move Square</button>
+    <button onclick="movedownright()">Move Down Right</button>
+    <button onclick="moveupright()">move up right</button>
+    <button onclick="movetriangle()">Move Triangle</button>
+    <button onclick="moveoctagon()">Move Octagon</button>
+    
+    
+    
+    
+</body>
+
+
+
+
+
